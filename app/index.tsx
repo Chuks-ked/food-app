@@ -1,3 +1,4 @@
+import CartButton from "@/components/CartButton";
 import { images, offers } from "@/constants";
 import cn from 'clsx';
 import { FlatList, Image, Pressable, Text, TouchableOpacity, View } from "react-native";
@@ -66,7 +67,8 @@ export default function Index() {
                 <Image source={images.arrowDown} className="size-3" resizeMode="contain" />
               </TouchableOpacity>
             </View>
-            <Text>Cart</Text>
+
+            <CartButton />
           </View>
         )}
       />

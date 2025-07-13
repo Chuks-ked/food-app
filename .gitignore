@@ -41,3 +41,5 @@ appwrite.ts
 *.tsbuildinfo
 
 app-example
+
+.env.local

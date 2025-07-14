@@ -1,24 +1,15 @@
 import CartButton from "@/components/CartButton";
 import { images, offers } from "@/constants";
+import useAuthStore from "@/store/auth.store";
 import cn from 'clsx';
 import { FlatList, Image, Pressable, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
+  const { user } = useAuthStore();
+
   return (
     <SafeAreaView className="flex-1 bg-white">
-
-      {/* <View className="flex-between flex-row w-full my-5 px-5">
-        <View className="flex-start">
-          <Text className="small-bold text-primary">DELIVER TO</Text>
-          <TouchableOpacity className="flex-center flex-row gap-x-1 mt-0.5">
-            <Text className="paragrah-bold text-dark-100">Maryland</Text>
-            <Image source={images.arrowDown} className="size-3" resizeMode="contain" />
-          </TouchableOpacity>
-        </View>
-        <Text>Cart</Text>
-      </View> */}
-
       <FlatList
         data={offers}
         renderItem={({ item, index }) => {

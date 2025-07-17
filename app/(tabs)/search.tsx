@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { FlatList, Text, View } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import Filter from "@/components/Filter";
 import SearchBar from "@/components/SearchBar";
 
 const Search = () => {
@@ -53,7 +54,7 @@ const Search = () => {
 
                         <SearchBar />
 
-                        {/* <Filter categories={categories!} /> */}
+                        <Filter categories={categories!} />
                     </View>
                 )}
                 ListEmptyComponent={() => !loading && <Text>No results</Text>}
